@@ -1,0 +1,9 @@
+version: '3'
+services:
+  nexus-server:
+    user: root
+    image: sonatype/nexus3 
+    container_name: nexus-server
+    ports:
+      - "8081:8081"
+    restart: always

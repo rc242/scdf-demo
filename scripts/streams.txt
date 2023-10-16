@@ -1,0 +1,3 @@
+app register --name scdf-hello-world --type processor --uri maven://com.example:scdf-hello-world:0.0.1-SNAPSHOT
+stream create hello-world-stream --definition 'http --server.port=20001 |scdf-hello-world --server.port=20002 --spring.cloud.stream.function.bindings.messenger-in-0=hello-world-stream.http --spring.cloud.stream.function.bindings.messenger-out-0=hello-world-stream.scdf-hello-world | log --server.port=20003'
+stream deploy hello-world-stream
