@@ -4,10 +4,19 @@ This repo has the barebones for playground with SCDF and contains the following
 
 Docker Compose file with:
 * Spring Cloud Dataflow server
+  * Exposed on port 9393
 * Spring Cloud Skipper
+  * Exposed on port 7577
+  * Ports exposed on ports 20000 - 20195
 * Kafka for communicating between apps
 * Nexus Server for dataflow-server and skipper to poll your artifacts
+  * Exposed on port 8081
+* Prometheus and Grafana
+  * Grafana exposed on port 3000
 * Simple processor that adds onto the source text with a greet.
+  * http -> processor -> log
+  * http exposed on port 20001
+
 
 ## Setup
 ```
