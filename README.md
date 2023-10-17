@@ -14,10 +14,10 @@ Docker Compose file with:
    ./scripts/setupDocker.sh
    ./scripts/setupRepository.sh
    ./scripts/setupStream.sh
-   ./java -jar ./scripts/spring-cloud-dataflow-shell-2.11.0.jar
 ```
 
 ## Verification 
+* java -jar ./scripts/spring-cloud-dataflow-shell-2.11.0.jar
 * dataflow:>http post --target http://localhost:20001 --data "World"
 * Go to dashboard at http://localhost:9393
 * Streams Dropdown -> Streams -> "hello-world-stream"
