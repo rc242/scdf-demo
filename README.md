@@ -24,3 +24,8 @@ Docker Compose file with:
 * Click "View Log" next to "log" in the Run-time widget
 * Verify the following
   > [container-0-C-1] log-sink                                 : Hello: World!
+
+## Resources
+* [SCDF Docker](https://dataflow.spring.io/docs/installation/local/docker/)
+* [Spring Cloud Data Flow Reference](https://docs.spring.io/spring-cloud-dataflow/docs/2.11.1/reference/htmlsingle/#getting-started)
+* [Nexus API](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api)
