@@ -7,24 +7,25 @@ Docker Compose file with:
   * Exposed on port 9393
 * Spring Cloud Skipper
   * Exposed on port 7577
-  * Ports exposed on ports 20000 - 20195
+  * Exposed on ports 20000 - 20195 for streams
 * Kafka for communicating between apps
 * Nexus Server for dataflow-server and skipper to poll your artifacts
   * Exposed on port 8081
 * Prometheus and Grafana
   * Grafana exposed on port 3000
 * Simple processor that adds onto the source text with a greet.
-  * http -> processor -> log
-  * http exposed on port 20001
-
-
+  
 ## Setup
 ```
    ./scripts/setupDocker.sh
    ./scripts/setupRepository.sh
    ./scripts/setupStream.sh
 ```
-
+* Sets up Docker environment
+* Configures Nexus and pushes example stream jar
+* Sets up the following for the example stream
+  * http (port 20001) -> processor (port 20002) -> log (port 20003)
+  
 ## Verification 
 * java -jar ./scripts/spring-cloud-dataflow-shell-2.11.0.jar
 * dataflow:>http post --target http://localhost:20001 --data "World"
